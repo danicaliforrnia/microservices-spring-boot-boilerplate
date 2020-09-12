@@ -19,6 +19,10 @@ public class UserPasswordDto {
     @NotNull
     private boolean active;
     @NotNull
+    private boolean passwordActive;
+    @NotNull
+    private boolean accountLocked;
+    @NotNull
     private String password;
     @NotNull
     private RoleDto role;

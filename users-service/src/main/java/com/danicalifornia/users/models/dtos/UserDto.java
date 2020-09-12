@@ -18,9 +18,5 @@ public class UserDto {
     @NotNull
     private boolean active;
     @NotNull
-    private boolean passwordActive;
-    @NotNull
-    private boolean accountLocked;
-    @NotNull
     private RoleDto role;
 }

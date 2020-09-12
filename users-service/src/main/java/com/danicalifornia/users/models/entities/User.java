@@ -32,6 +32,12 @@ public class User implements Serializable {
     @Column(name = "usr_is_active", nullable = false)
     private boolean active;
 
+    @Column(name = "usr_password_active", nullable = false)
+    private boolean passwordActive;
+
+    @Column(name = "usr_account_locked", nullable = false)
+    private boolean accountLocked;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rol_id", referencedColumnName = "rol_id", nullable = false)
     private Role role;

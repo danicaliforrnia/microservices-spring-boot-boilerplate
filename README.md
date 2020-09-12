@@ -89,8 +89,7 @@ A custom token service (extending from DefaultTokenServices) manage access and r
 ### Users Service
 
 Users Service is in charge of users and roles management. Embedded H2 is the database where users, roles and permissions data 
-is stored. Access to H2 database console is through `localhost:PORT/api/users/v1/h2-console` with the credentials
-at application.properties file.
+is stored. Access to H2 database console is through `localhost:PORT/api/users/v1/h2-console`. Database is populated through import.sql file.
 
 This server makes used of `errors-spring-boot-starter` library to handle custom exceptions.
 

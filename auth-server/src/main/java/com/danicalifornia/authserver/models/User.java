@@ -19,11 +19,11 @@ public class User {
     @NotNull
     private boolean active;
     @NotNull
-    private String password;
-    @NotNull
-    private Role role;
-    @NotNull
     private boolean passwordActive;
     @NotNull
     private boolean accountLocked;
+    @NotNull
+    private String password;
+    @NotNull
+    private Role role;
 }

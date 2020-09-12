@@ -2,7 +2,6 @@ package com.danicalifornia.authserver.config;
 
 import com.danicalifornia.authserver.models.User;
 import com.danicalifornia.authserver.services.IUsersService;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.CacheManager;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
@@ -19,12 +18,6 @@ public class CustomTokenEnhancer implements TokenEnhancer {
     private final IUsersService usersService;
 
     private final CacheManager cacheManager;
-
-    @Value("${oauth.gre.id}")
-    private String greId;
-
-    @Value("${oauth.quick-pay.id}")
-    private String quickPayId;
 
     public CustomTokenEnhancer(IUsersService usersService,
                                CacheManager cacheManager) {

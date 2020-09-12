@@ -57,13 +57,8 @@ git clone https://github.com/danicaliforrnia/microservices-spring-boot-boilerpla
 Config Server is a centralized configuration service. With this service
 you have a central place to manage external properties for applications across all environments.
 
-This project uses a local git repo as properties storage. You can change the local repo setting the url
-in the properties file:
-```sh
-spring.cloud.config.server.git.uri=file:///C:/Sources/personal-projects/microservices-spring-boot-boilerplate/properties
-```
-
-You can also use a remote git repo as properties storage. 
+This project uses a local directory as properties storage. You can change the repo setting
+in the properties file. A remote git repository can be used as properties storage.
 
 ### Eureka Server
 
@@ -88,6 +83,8 @@ You can use pre and post filter to add or check data in the request and response
 
 Auth Server is an OAuth2 security server, in charge of JWT token generation and user login attempts.
 This serve makes use of feign client in order to request user info to Users Service.
+
+A custom token service (extending from DefaultTokenServices) manage access and refresh tokens.
 
 ### Users Service
 
